@@ -1,11 +1,11 @@
-# deis/go-dev
+# deiscc/go-dev
 
-[![Build Status](https://travis-ci.org/deis/docker-go-dev.svg?branch=master)](https://travis-ci.org/deis/docker-go-dev) [![Docker Repository on Quay](https://quay.io/repository/deis/go-dev/status "Docker Repository on Quay")](https://quay.io/repository/deis/go-dev)
+[![Build Status](https://travis-ci.org/deiscc/docker-go-dev.svg?branch=master)](https://travis-ci.org/deiscc/docker-go-dev)
 
 A [Go][] language development toolbox.
 
-Many [Deis Workflow][] components use this Docker image as a standard build and test environment,
-but it is intended to be useful to any Go developer. Please help make deis/go-dev better by
+Many [Deiscc Workflow][] components use this Docker image as a standard build and test environment,
+but it is intended to be useful to any Go developer. Please help make deiscc/go-dev better by
 creating [issues][] and submitting [pull requests][].
 
 ## Image Contents
@@ -39,37 +39,32 @@ creating [issues][] and submitting [pull requests][].
 ## Usage
 
 Mount your local Go code into a container's `$GOPATH` to run any `go` command or one of the
-included tools or scripts. Here's an example of running `glide up` for deis/builder:
+included tools or scripts. Here's an example of running `glide up` for deiscc/builder:
 
 ```console
 $ docker run --rm \
-  --volume $GOPATH/src/github.com/deis/builder:/go/src/github.com/deis/builder \
-  --workdir /go/src/github.com/deis/builder \
-  quay.io/deis/go-dev:latest \
+  --volume $GOPATH/src/github.com/deiscc/builder:/go/src/github.com/deiscc/builder \
+  --workdir /go/src/github.com/deiscc/builder \
+  deiscc/go-dev:latest \
   glide up
 ```
 
-The latest deis/go-dev Docker image is available at:
-
-* [Quay.io][]
-  ```
-  docker pull quay.io/deis/go-dev
-  ```
+The latest deiscc/go-dev Docker image is available at:
 
 * [Docker Hub][]
   ```
-  docker pull deis/go-dev
+  docker pull deiscc/go-dev
   ```
 
 [az]: https://github.com/Azure/azure-cli#readme
 [azcopy]: https://docs.microsoft.com/en-us/azure/storage/common/storage-use-azcopy-linux?toc=%2fazure%2fstorage%2ffiles%2ftoc.json
-[Deis Workflow]: https://deis.com/
+[Deiscc Workflow]: https://deis.cc/
 [delve]: https://github.com/derekparker/delve
 [dep]: https://github.com/golang/dep
 [Docker Hub]: https://hub.docker.com
 [Docker]: http://www.docker.com
 [gb]: https://github.com/constabulary/gb/
-[gen-changelog.sh]: https://github.com/deis/docker-go-dev/tree/master/rootfs/usr/local/bin/gen-changelog.sh
+[gen-changelog.sh]: https://github.com/deiscc/docker-go-dev/tree/master/rootfs/usr/local/bin/gen-changelog.sh
 [ginkgo]: https://github.com/onsi/ginkgo
 [glide]: https://github.com/Masterminds/glide
 [go-bindata]: https://github.com/jteeuwen/go-bindata
@@ -78,17 +73,17 @@ The latest deis/go-dev Docker image is available at:
 [gometalinter]: https://github.com/alecthomas/gometalinter
 [gox]: https://github.com/mitchellh/gox
 [helm]: https://github.com/kubernetes/helm
-[issues]: https://github.com/deis/docker-go-dev/issues
+[issues]: https://github.com/deiscc/docker-go-dev/issues
 [jq]: https://stedolan.github.io/jq/
 [jwt]: https://github.com/dgrijalva/jwt-go
 [kubectl]: https://kubernetes.io/docs/user-guide/kubectl-overview/
-[pull requests]: https://github.com/deis/docker-go-dev/pulls
+[pull requests]: https://github.com/deiscc/docker-go-dev/pulls
 [Quay.io]: https://quay.io
 [Packer]: https://github.com/hashicorp/packer
 [ruby]: https://www.ruby-lang.org/
 [shellcheck]: https://github.com/koalaman/shellcheck
 [shyaml]: https://github.com/0k/shyaml
-[test-cover.sh]: https://github.com/deis/docker-go-dev/tree/master/rootfs/usr/local/bin/test-cover.sh
+[test-cover.sh]: https://github.com/deiscc/docker-go-dev/tree/master/rootfs/usr/local/bin/test-cover.sh
 [Ubuntu 16.04]: https://hub.docker.com/_/ubuntu/
 [unzip]: https://linux.die.net/man/1/unzip
 [upx]: http://upx.sourceforge.net/
